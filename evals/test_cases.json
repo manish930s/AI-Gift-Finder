@@ -1,0 +1,98 @@
+[
+  {
+    "id": "TC01",
+    "input": "thoughtful gift for a friend with a 6-month-old, under 200 AED",
+    "expected_behavior": "returns 1-3 products, all under 200 AED, suitable for 0-6 months",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC02",
+    "input": "something nice",
+    "expected_behavior": "asks clarifying question about age and budget",
+    "should_clarify": true,
+    "should_fallback": false,
+    "adversarial": true
+  },
+  {
+    "id": "TC03",
+    "input": "gift for a 25-year-old man",
+    "expected_behavior": "graceful fallback — out of scope for Mumzworld",
+    "should_clarify": false,
+    "should_fallback": true,
+    "adversarial": true
+  },
+  {
+    "id": "TC04",
+    "input": "toy under 5 AED",
+    "expected_behavior": "fallback — no product exists that cheap",
+    "should_clarify": false,
+    "should_fallback": true,
+    "adversarial": true
+  },
+  {
+    "id": "TC05",
+    "input": "هدية لطفل عمره سنة",
+    "expected_behavior": "handles Arabic input, returns bilingual results",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC06",
+    "input": "baby shower gift under 300 AED for twins",
+    "expected_behavior": "returns relevant products, reasoning mentions twins or quantity",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC07",
+    "input": "educational toy for a 3-year-old girl",
+    "expected_behavior": "returns toys tagged educational, age 2-4 or 3-5",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC08",
+    "input": "safe car seat for newborn",
+    "expected_behavior": "returns Safety category product suitable for newborns",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC09",
+    "input": "gift for pregnant mom, not for the baby",
+    "expected_behavior": "returns mom-focused products (not baby items)",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  },
+  {
+    "id": "TC10",
+    "input": "اشتري لي هاتف آيفون",
+    "expected_behavior": "graceful out-of-scope refusal in Arabic",
+    "should_clarify": false,
+    "should_fallback": true,
+    "adversarial": true
+  },
+  {
+    "id": "TC11",
+    "input": "gift",
+    "expected_behavior": "clarification — too vague",
+    "should_clarify": true,
+    "should_fallback": false,
+    "adversarial": true
+  },
+  {
+    "id": "TC12",
+    "input": "stroller under 1500 AED for a newborn who will grow fast",
+    "expected_behavior": "returns Travel category, reasoning mentions growth/adjustability",
+    "should_clarify": false,
+    "should_fallback": false,
+    "adversarial": false
+  }
+]

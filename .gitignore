@@ -1,0 +1,22 @@
+.env
+.env.*
+!/.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ChromaDB
+chroma_db/
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+
+# Service account keys
+*service-account*.json
+gen-lang-client-*.json
